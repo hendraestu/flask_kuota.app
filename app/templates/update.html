@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+{% block content%}
+
+<div class="row">
+    <form action="/updatekuota" method="post">
+  <div class="form-floating mb-3">
+      <input type="text" name="nama" value={{data.nama}} class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input type="hidden" name="id" class="form-control" value={{data.id}} id="floatingInput" placeholder="name@example.com">
+      <label for="nama">Nama</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="text" name="sekolah" value={{data.sekolah}} class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="sekolah">Sekolah</label>
+    </div>
+    <div class="form-floating mb-3">
+      <input type="email" name="email" value={{data.email}} class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="email">Email</label>
+    </div>
+    <div class="row g-2">
+      <div class="col-md">
+        <div class="form-floating mb-3">
+          <input type="text" name="nomor" value={{data.email}} class="form-control" id="floatingInputGrid" placeholder="name@example.com">
+          <label for="nomer">Nomer</label>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="form-floating mb-3">
+            <input type="text" name="perdana" value={{data.perdana}} class="form-control" id="floatingInputGrid" placeholder="name@example.com">
+            <label for="nomer">Kartu Perdana</label>
+        </div>
+      </div>
+    </div>
+    <input class="btn btn-primary" type="submit" value="Submit" style="width: 30%;">
+  </form>
+</div>
+
+{%endblock%}
